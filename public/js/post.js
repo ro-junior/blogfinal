@@ -19,9 +19,10 @@ function addElement()
 
                                     <div class="w-full">
                                         <label class="text-sm">Design do elemento</label>
-                                        <select name="element[${ELEMENT_COUNT}][design]"
+                                        <select name="element[${ELEMENT_COUNT}][template]"
                                             class="border-0 border-b border-gray-500 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-0 py-2.5">
                                             <option value="default" selected>Padrão</option>
+                                            <option value="min-image">Mini Imagem</option>
                                         </select>
                                     </div>
                                 </section>

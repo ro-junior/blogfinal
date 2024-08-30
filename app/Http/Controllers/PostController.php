@@ -63,7 +63,7 @@ class PostController extends Controller
 
             $GROUP_ELEMENT = GroupElement::create([
                 'post_id' => $POSTAGEM->id,
-                'desgin' => $element['design'],
+                'template' => $element['template'],
             ]);
 
             $element = reorderArrayKeys($element, ['title', 'image', 'paragraph']);

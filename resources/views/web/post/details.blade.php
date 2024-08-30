@@ -44,25 +44,17 @@
                         @foreach ($post->gpElement as $group)
                             <section class="space-y-4">
                                 @foreach ($group->elements as $element)
-                                    @switch($element->type)
-                                        @case('paragraph')
-                                            <p class="text-justify text-md">{{ $element->content }}</p>
-                                        @break
-
-                                        @case('image')
-                                            <img class="scale-80 rounded-lg" src="{{ Storage::url($element->content) }}" alt="">
-                                        @break
-
-                                        @case('title')
-                                            <h1 class="text-xl font-semibold">{{ $element->content }}</h1>
-                                        @break
-
-                                        @default
-                                    @endswitch
+                                    @include('web.post.templates.' . $group->template, ['element' => $element])
                                 @endforeach
 
                             </section>
                         @endforeach
+
+
+                        <section class="space-y-4">
+
+                        </section>
+
                     </div>
                 </section>
 

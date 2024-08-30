@@ -46,7 +46,7 @@ class GroupElement extends Model
     protected $table = 'groups_elements';
     protected $fillable = [
         'post_id',
-        'desgin'
+        'template'
     ];
 
     public function elements(){
